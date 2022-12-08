@@ -7,7 +7,7 @@ AliceBot
 * go-cqhttp_linux_arm64
 
 ###### 部署步骤
-1. 安装jdk1.8
+1. 安装jdk1.8<br>
      sudo apt-get install openjdk-8-jdk
      
 2. 下载运行go-cq
