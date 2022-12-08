@@ -1,7 +1,7 @@
 #基础配置
 clientBaseConfig:
-  admin: 1424197182
-  robot: 2638216948
+  admin: 10001
+  robot: 10002
   wakeUpWord: Hi Alice
   standbyWord: Nothing,thanks
   promptUpWord: Hi master,what i to do?
