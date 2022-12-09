@@ -7,17 +7,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.HashMap;
 
-/**
- * 功能:基础配置类
- * 作者:Mr.Fokers
- * 日期：2022年12月09日 2:13
- */
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class BaseConfigBean {
+    private String cqHttpWs;
     private HashMap<String, String> userList;
     private String atRobotCQ;
     private String wakeUpWord;
