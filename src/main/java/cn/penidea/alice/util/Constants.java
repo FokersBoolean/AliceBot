@@ -9,5 +9,5 @@ import java.util.HashMap;
  */
 
 public class Constants {
-    public static final String WS_URL = "ws://127.0.0.1:9099";
+    public static final String WS_URL = "ws://127.0.0.1:8080";
 }
