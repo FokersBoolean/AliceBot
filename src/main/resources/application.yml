@@ -6,7 +6,7 @@ clientBaseConfig:
   standbyWord: Nothing,thanks
   promptUpWord: Hi master,what i to do?
   robotName: Alice
-
+  cqHttpWs: ws://127.0.0.1:9099
 # chatGPT配置
 chatGPT:
   email: fokers@penidea.com

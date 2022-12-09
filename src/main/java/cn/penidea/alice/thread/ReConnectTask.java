@@ -1,7 +1,8 @@
 package cn.penidea.alice.thread;
 
-import cn.penidea.alice.util.Constants;
+import cn.penidea.alice.util.BaseConfigBean;
 import cn.penidea.alice.ws.Client;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 功能:重连任务线程
@@ -10,10 +11,15 @@ import cn.penidea.alice.ws.Client;
  */
 
 public class ReConnectTask implements Runnable {
+    private static BaseConfigBean baseConfigBean;
+    @Autowired
+    public void setBaseConfigBean(BaseConfigBean baseConfigBean) {
+        ReConnectTask.baseConfigBean = baseConfigBean;
+    }
     @Override
     public void run() {
         while (true) {
-            if (Client.connect(Constants.WS_URL)) {
+            if (Client.connect(baseConfigBean.getCqHttpWs())) {
                 System.out.println("重连成功");
                 break;
             } else {
