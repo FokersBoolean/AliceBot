@@ -16,6 +16,8 @@ import java.util.HashMap;
 
 @Configuration
 public class ClientBaseConfig {
+    @Value("${clientBaseConfig.cqHttpWs}")
+    private String cqHttpWs;
     @Value("${clientBaseConfig.admin}")
     private String adminQQ;
     @Value("${clientBaseConfig.robot}")
@@ -34,6 +36,6 @@ public class ClientBaseConfig {
         HashMap<String, String> userList = new HashMap<>();
         userList.put(adminQQ, "");
         userList.put("admin", adminQQ);
-        return new BaseConfigBean(userList, "[CQ:at,qq=" + robotQQ + "]", wakeUpWord, robotName, standbyWord, promptUpWord);
+        return new BaseConfigBean(cqHttpWs, userList, "[CQ:at,qq=" + robotQQ + "]", wakeUpWord, robotName, standbyWord, promptUpWord);
     }
 }
