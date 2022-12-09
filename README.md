@@ -22,6 +22,11 @@ AliceBot
      然后使用java -jar -Xmx512m --clientBaseConfig.admin=管理员QQ --clientBaseConfig.robot=机器人QQ --clientBaseConfig.wakeUpWord=唤醒词 --clientBaseConfig.standbyWord=待机词 --clientBaseConfig.promptUpWord=提示词 --clientBaseConfig.robotName=机器人名称 --chatGPT.email=gpt邮箱 --chatGPT.password=gpt密码 --chatGPT.sessionToken=token --server.port=8080<br>
      运行后再使用Ctrl+A+D放到后台运行即可
 
-###########V1.0.0 版本内容更新
+####### 机器人的所有操作指令（以下指令皆需唤醒机器人后再进行发送才能生效）
+#reset chat 重置对话
+add @某人 添加一个拥有权限的使用者
+del @某人 将某人从使用者列表移除
+
+####### V1.0.0 版本内容更新
 1. 新功能     增删用户
 2. 新功能     基础对接
