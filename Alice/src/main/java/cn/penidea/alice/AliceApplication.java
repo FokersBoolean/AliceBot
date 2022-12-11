@@ -45,6 +45,10 @@ public class AliceApplication {
     private boolean isPublic;
     @Value("${clientBaseConfig.isConcurrency}")
     private boolean isConcurrency;
+    @Value("${clientBaseConfig.isAddself}")
+    private boolean isAddself;
+    @Value("${clientBaseConfig.isLoading}")
+    private boolean isLoading;
 
     @Value("${executor.corePoolSize}")
     private Integer corePoolSize;
@@ -84,10 +88,12 @@ public class AliceApplication {
             loadingWord = props.getStr("loadingWord");
             isPublic = props.getBool("isPublic");
             isConcurrency = props.getBool("isConcurrency");
+            isAddself = props.getBool("isAddself");
+            isLoading = props.getBool("isLoading");
         }
         userList.put(adminQQ, "");
         userList.put("admin", adminQQ);
-        return new BaseConfigBean(userList, "[CQ:at,qq=" + robotQQ + "]", wakeUpWord, robotName, standbyWord, promptUpWord, standbyPrompt, loadingWord, isPublic, isConcurrency);
+        return new BaseConfigBean(userList, "[CQ:at,qq=" + robotQQ + "]", wakeUpWord, robotName, standbyWord, promptUpWord, standbyPrompt, loadingWord, isPublic, isConcurrency, isAddself, isLoading);
     }
 
     @SneakyThrows
