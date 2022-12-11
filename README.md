@@ -15,7 +15,7 @@ AliceBot
       下载到服务器后使用tar -zxvf进行解压<br>
       运行其中的的在解压目录下运行screen -S gocq<br>
       再运行./go-cqhttp，第一次运行会先让你选连接方式，我们选择2：正向Websocket,gocq在解压目录下生成config.yml，这时我们先Ctrl+C<br>
-      运行nano config.yml，拉到最下面找到address: 0.0.0.0:8080，把8080替换成9099,然后Ctrl+X,然后按Y，再回车一下保存<br>
+      运行nano config.yml，拉到最下面找到address: 0.0.0.0:8080，把0.0.0.0:8080替换成192.168.0.102:9099,然后Ctrl+X,然后按Y，再回车一下保存<br>
       然后再次运行./go-cqhttp，完成登录后按Ctrl+A+D放到后台运行<br>
 2. 执行jar包
      先输入screen -S Alice 创建个会话<br>
