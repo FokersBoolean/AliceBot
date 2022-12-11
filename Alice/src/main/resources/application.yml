@@ -13,6 +13,8 @@ clientBaseConfig:
   loadingWord: 正在检索...
   isPublic: false
   isConcurrency: false
+  isAddself: false
+  isLoading: true
 
 #线程池配置
 executor:
