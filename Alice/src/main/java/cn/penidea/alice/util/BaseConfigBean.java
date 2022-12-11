@@ -28,4 +28,6 @@ public class BaseConfigBean {
     private String loadingWord;
     private boolean isPublic;
     private boolean isConcurrency;
+    private boolean isAddself;
+    private boolean isLoading;
 }
