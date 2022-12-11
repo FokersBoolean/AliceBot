@@ -36,7 +36,7 @@ public class ChatGPTServiceImpl implements ChatGPTService {
             return message.get("message").toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return "Token失效或服务器延迟，如多次尝试询问无果请尝试重新获取cookie";
+            return "你这要求有点问题啊，我答不上来";
         }
     }
 
