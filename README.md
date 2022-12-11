@@ -2,7 +2,7 @@ AliceBot
 ===========================
 
 ###### 环境依赖
-* ubuntu 18.04
+* ubuntu 18.04/22.04
 * jdk8
 * go-cqhttp_linux_arm64
 
@@ -19,24 +19,26 @@ AliceBot
       然后再次运行./go-cqhttp，完成登录后按Ctrl+A+D放到后台运行<br>
 2. 执行jar包
      先输入screen -S Alice 创建个会话<br>
-     然后使用java -jar -Xmx512m --clientBaseConfig.admin=管理员QQ --clientBaseConfig.robot=机器人QQ --clientBaseConfig.wakeUpWord=唤醒词 --clientBaseConfig.standbyWord=待机词 --clientBaseConfig.promptUpWord=提示词 --clientBaseConfig.robotName=机器人名称 --chatGPT.email=gpt邮箱 --chatGPT.password=gpt密码 --chatGPT.sessionToken=token --server.port=8080<br>
-     运行后再使用Ctrl+A+D放到后台运行即可
+     然后使用java -jar <此处包含两边括号替换为jar包名称，包含.jar> -Xmx512m<br>
+     运行后等待生成config.properties文件，编辑该文件后再使用上面的指令，之后再使用Ctrl+A+D放到后台运行即可
 
 ###### 机器人的所有操作指令（以下指令皆需唤醒机器人后再进行发送才能生效）<br>
-#private 将机器人设为私有的，需要权限(默认就是私有)<br>
-#public 将机器人设为所有人可用<br>
-add @某人 添加一个拥有权限的使用者<br>
-del @某人 将某人从使用者列表移除<br>
-#reset 在多线程模式下清除所有会话，单线程模式下清除会话<br>
-#reset me 用于多线程时清除管理员自己的会话<br>
-#more 开启多线程模式<br>
-#less 关闭多线程模式<br>
-#alone 开启一问到底(既无需唤醒机器人)<br>
-#add this 将当前的群聊加入权限列表<br>
-#del this 将当前的群聊从权限列表中移除<br>
-#help 查看指令列表<br>
+#设为私有 将机器人设为私有的，需要权限(默认就是私有)<br>
+#设为公有 将机器人设为所有人可用<br>
+也和这位聊吧@某人 添加一个拥有权限的使用者<br>
+别理@某人 将某人从使用者列表移除<br>
+#重置所有会话 在多线程模式下清除所有会话，单线程模式下清除会话<br>
+#重置我的会话 用于多线程时清除管理员自己的会话<br>
+#开启多线程 开启多线程模式<br>
+#开启单线程 关闭多线程模式<br>
+#开启一问到底 开启一问到底(既无需唤醒机器人)<br>
+#在本群开机 将当前的群聊加入权限列表<br>
+#在本群关机 将当前的群聊从权限列表中移除<br>
+#帮助 查看指令列表<br>
+#开关自添加 机器人为私有时，让机器人接受或不接受别人把他自己添加到机器人的聊天对象列表中<br>
+#开关等待词 开关等待词<br>
 
-###### V3.0.0 版本内容更新
+###### V0.0.3 版本内容更新
 1. 新功能     多线程<br>
 2. 新功能     一问到底<br>
 3. 新功能     群聊权限<br>
